@@ -98,3 +98,54 @@ def validate_dni_number(dni):
 
     return validation
 
+def counter_number():
+    number = 0
+    total_sum = 0
+    even_sum = 0
+    odd_sum = 0
+
+    num_list = []
+    even_list = []
+    odd_list = []
+
+    while(number != -1):
+        number = int(input("Introduce a number: "))
+
+        total_sum += number
+        num_list.append(number)
+
+        if number % 2 == 0:
+            even_list.append(number)
+            even_sum += number
+        else:
+            odd_list.append(number)
+            odd_sum += number
+
+    print(f"""
+    Numbers: {num_list}
+    Sum: {total_sum}
+
+    Even numbers: {even_list}
+    Even sum: {even_sum}
+
+    Odd numbers: {odd_list}
+    Odd sum: {odd_sum}
+    """)
+
+def counter_number():
+    numbers = [int(input("Enter a number: ")) for _ in range(5)]
+
+    even_numbers = [n for n in numbers if n % 2 == 0]
+    odd_numbers = [n for n in numbers if n % 2 != 0]
+
+    print(f"""
+Numbers: {numbers}
+Total sum: {sum(numbers)}
+
+Even numbers: {even_numbers}
+Even sum: {sum(even_numbers)}
+
+Odd numbers: {odd_numbers}
+Odd sum: {sum(odd_numbers)}
+""")
+
