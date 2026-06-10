@@ -109,7 +109,7 @@ def counter_number():
     odd_list = []
 
     while(number != -1):
-        number = int(input("Introduce a number: "))
+        number = int(input("Enter a number. If you want to finish, enter -1."))
 
         total_sum += number
         num_list.append(number)
@@ -132,20 +132,21 @@ def counter_number():
     Odd sum: {odd_sum}
     """)
 
-def counter_number():
-    numbers = [int(input("Enter a number: ")) for _ in range(5)]
+def narcisit_number():
+    import math
+    print("Enter a number: ")
+    num_text = input("")
+    longer = len(num_text)
+    sum = 0
+    for i in range(longer):
+        num_digit = num_text[i]
+        number = int(num_digit)
+        power = math.pow(number,longer)
+        sum += power
+        if (sum == int(num_text)):
+            return True
+        else:
+            return False
+        
 
-    even_numbers = [n for n in numbers if n % 2 == 0]
-    odd_numbers = [n for n in numbers if n % 2 != 0]
-
-    print(f"""
-Numbers: {numbers}
-Total sum: {sum(numbers)}
-
-Even numbers: {even_numbers}
-Even sum: {sum(even_numbers)}
-
-Odd numbers: {odd_numbers}
-Odd sum: {sum(odd_numbers)}
-""")
 
